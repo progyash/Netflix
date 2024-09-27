@@ -1,0 +1,124 @@
+/* Netflix.css */
+
+/* NetflixSeries Styles */
+.netflix-series {
+  padding: 20px;
+  background-color: #141414;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* NetflixCard Styles */
+.series-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.netflix-card {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px;
+  width: 300px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced out evenly */
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* For hover effects */
+}
+
+.netflix-card:hover {
+  transform: scale(1.05);
+}
+
+.series-image {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover;
+}
+
+.series-info {
+  padding: 15px;
+  text-align: left;
+  height: calc(100% - 200px); /* Adjust height based on image size */
+  overflow-y: auto; /* Add scroll if content overflows */
+  position: relative; /* Necessary for hover effect on scrollbar */
+}
+
+/* Custom Scrollbar Styles */
+.series-info::-webkit-scrollbar {
+  width: 4px; /* Thinner scrollbar width */
+}
+
+.series-info::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.series-info::-webkit-scrollbar-thumb {
+  background: #4c4c4c; /* Grey-black shade */
+  border-radius: 2px; /* Rounded scrollbar thumb */
+}
+
+/* Hide scrollbar by default and show on hover */
+.series-info::-webkit-scrollbar {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.netflix-card:hover .series-info::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.series-name {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.series-rating {
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  margin-bottom: 10px;
+}
+
+.series-description {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  overflow: hidden; /* Hide overflow to prevent layout issues */
+}
+
+.series-cast,
+.series-genre {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.watch-link {
+  display: block;
+  margin-top: auto; /* Push the link to the bottom of the card */
+  padding: 10px;
+  background-color: #e50914;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.watch-link:hover {
+  background-color: #f40612;
+}
+
+.netflix-logo {
+  width: 300px; /* Increase the width significantly */
+  height: 100px; /* Set an explicit height */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
